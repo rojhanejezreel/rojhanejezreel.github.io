@@ -1,0 +1,519 @@
+@font-face {
+    font-family: BeVietnamPro;
+    src: url("../assets/fonts/Be_Vietnam_Pro/BeVietnamPro-Regular.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: BeVietnamProLight;
+    src: url("../assets/fonts/Be_Vietnam_Pro/BeVietnamPro-Light.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: BeVietnamProLightItalic;
+    src: url("../assets/fonts/Be_Vietnam_Pro/BeVietnamPro-LightItalic.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: TheSeasonsItalic;
+    src: url("../assets/fonts/TheSeasonsFont/Fontspring-DEMO-theseasons-it.otf") format("opentype");
+}
+
+@font-face {
+    font-family: TheSeasonsRegular;
+    src: url("../assets/fonts/TheSeasonsFont/Fontspring-DEMO-theseasons-reg.otf") format("opentype");
+}
+
+@font-face {
+    font-family: TheSeasonsBoldItalic;
+    font-weight: Bold;
+    src: url("../assets/fonts/TheSeasonsFont/Fontspring-DEMO-theseasons-bdit.otf") format("opentype");
+}
+
+@font-face {
+    font-family: PinyonScript;
+    src: url("/assets/fonts/Pinyon_Script/PinyonScript-Regular.ttf") format("opentype");
+}
+
+:root {
+    --offwhite: #FFFDF6;
+    --lightbrown: #d4bdad;
+    --darkgray: #191919;
+}
+
+html {
+    font-family: BeVietnamProLight, sans-serif;
+    font-size: 16px;
+    color: var(--darkgray);
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+section {
+    margin: 0;
+    max-width: 100%;
+}
+
+img {
+    width: 50px;
+}
+
+main {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+
+#hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+    color: var(--offwhite);
+}
+
+.background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    z-index: -1;
+    transform: translateZ(-10px) scale(2.1);
+    filter: brightness(80%);
+}
+
+.hero-name {
+    font-family: TheSeasonsItalic, sans-serif;
+    font-size: min(12vw, 96px);
+    color: var(--offwhite);
+    margin: 0;
+    text-shadow: 0px 0px 6px rgba(224, 111, 35, 0.678);
+    opacity: 90%;
+    margin-left: 10vw;
+    margin-bottom: 5%;
+}
+
+.hero-name .and {
+    font-family: PinyonScript, sans-serif;
+}
+
+.hero-date {
+    font-family: TheSeasonsRegular, sans-serif;
+    font-size: min(3vw, 56px);
+    margin-left: 10vw;
+}
+
+@media only screen and (max-width: 600px) {
+    #hero {
+        justify-content: center;
+        align-items: center;
+    }
+    .background {
+        object-position: 65% 0;
+    }
+}
+
+#our-story {
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background: var(--lightbrown);
+}
+
+.story-left {
+    padding: 20%;
+}
+
+.sl-text {
+    font-family: TheSeasonsRegular, sans-serif;
+    font-size: min(6vw, 32px);
+}
+
+.sl-img-cont {
+    padding: 3px;
+    border: 1px solid var(--darkgray);
+    height: 60%;
+    width: 100%;
+}
+
+.sl-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.story-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+    justify-items: center;
+}
+
+.sr-text {
+    font-family: BeVietnamProLightItalic, sans-serif;
+    max-width: 75%;
+    font-size: (1vw, 32px);
+    text-align: justify;
+}
+
+.sr-img-cont {
+    padding: 3px;
+    border: 1px solid var(--darkgray);
+    height: 40%;
+    width: 35%;
+}
+
+.sr-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media only screen and (max-width: 600px) {
+    #our-story {
+        height: 80vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+        background: var(--lightbrown);
+    }
+    .story-left {
+        padding: 10%;
+    }
+    .story-right {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        padding: 1em;
+        justify-items: center;
+    }
+    .sr-text {
+        font-family: BeVietnamProLightItalic, sans-serif;
+        max-width: 60%;
+        font-size: (1vw, 32px);
+        margin-left: 1em;
+        text-align: left;
+    }
+}
+
+#date-location {
+    background: var(--darkgray);
+    color: var(--offwhite);
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.dl-left {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    padding-left: 20%;
+}
+
+.dl-header {
+    font-family: TheSeasonsRegular, sans-serif;
+    font-size: min(6vw, 40px);
+}
+
+.dl-exclaim {
+    font-family: PinyonScript, sans-serif;
+}
+
+.dl-date,
+.dl-church,
+.dl-reception {
+    font-size: min(3vw, 20px);
+    margin: 0;
+}
+
+.dl-when,
+.dl-churchtxt,
+.dl-receptionplace {
+    font-weight: bold;
+}
+
+.dl-right {
+    align-items: center;
+    justify-items: center;
+}
+
+.dl-img-cont {
+    padding: 5px;
+    border: 1px solid var(--offwhite);
+    height: 80%;
+    width: 65%;
+}
+
+.dl-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .dl-left {
+        grid-area: bottom;
+    }
+    .dl-right {
+        grid-area: top;
+    }
+    #date-location {
+        background: var(--darkgray);
+        color: var(--offwhite);
+        height: 60vh;
+        display: grid;
+        grid-template-areas: 
+        "top top"
+        "bottom bottom";
+    }
+    .dl-left {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+    }
+    .dl-img-cont {
+        padding: 5px;
+        border: 1px solid var(--offwhite);
+        height: 100%;
+        width: 80%;
+    }
+    .dl-img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+#wear-puppy {
+    background: var(--lightbrown);
+    color: var(--darkgray);
+    height: 80vh;
+    display: flex;
+    justify-content:space-evenly
+}
+
+.wp-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.wpl-img-cont-cont {
+    padding: 1px;
+    height: auto;
+    width: min(40vw, 320px);
+    background: var(--darkgray);
+    box-sizing: border-box;
+    clip-path: polygon(5% 0%, 95% 0%, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0% 95%, 0% 5%);
+}
+
+.wpl-img-cont {
+    padding: 5px;
+    height: auto;
+    width: 100%;
+    background: var(--lightbrown);
+    box-sizing: border-box;
+    clip-path: polygon(5% 0%, 95% 0%, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0% 95%, 0% 5%);
+}
+
+.wpl-palette {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    clip-path: polygon(5% 0%, 95% 0%, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0% 95%, 0% 5%);
+}
+
+.wpl-text {
+    font-size: min(3vw, 20px);
+}
+
+.wpl-header {
+    text-transform: uppercase;
+}
+
+.wp-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.wpr-img-cont-cont {
+    padding: 1px;
+    height: auto;
+    width: min(40vw, 320px);
+    background: var(--darkgray);
+    box-sizing: border-box;
+    clip-path: polygon(5% 0%, 95% 0%, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0% 95%, 0% 5%);
+}
+
+.wpr-img-cont {
+    padding: 5px;
+    height: auto;
+    width: 100%;
+    background: var(--lightbrown);
+    box-sizing: border-box;
+    clip-path: polygon(5% 0%, 95% 0%, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0% 95%, 0% 5%);
+}
+
+.wpr-puppy {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    clip-path: polygon(5% 0%, 95% 0%, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0% 95%, 0% 5%);
+}
+
+.wpr-text {
+    font-size: min(3vw, 20px);
+}
+
+@media only screen and (max-width: 600px) {
+    #wear-puppy {
+        background: var(--lightbrown);
+        color: var(--darkgray);
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-evenly
+    }
+}
+
+#reception-map {
+    background: var(--darkgray);
+    color: var(--offwhite);
+    height: 80vh;
+    display: flex;
+    justify-content: center
+}
+
+.rm-left {
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    padding-right: 2%;
+}
+
+.rm-map-cont {
+    height: 90%;
+    width: auto;
+}
+
+.rm-map {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.rm-right {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1%;
+    padding-left: 2%;
+}
+
+.rm-header {
+    font-family: TheSeasonsRegular, sans-serif;
+    font-size: min(6vw, 64px);
+    margin-bottom: 30px;
+}
+
+.rm-msg,
+.rm-loc {
+    font-size: min(4vw, 20px);
+    padding-bottom: 1em;
+}
+
+.rm-right .fa-car {
+    font-size: min(3vw, 20px);
+    padding-right: 1em;
+}
+
+.rm-right .fa-map-marker {
+    font-size: min(3.5vw, 24px);
+    padding-right: 1.5em;
+}
+
+.rm-img-cont {
+    height: 58%;
+    width: auto;
+}
+
+.rm-reception-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media only screen and (max-width: 600px) {
+    #reception-map {
+        background: var(--darkgray);
+        color: var(--offwhite);
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center
+    }
+    .rm-left {
+        display: flex;
+        align-items: center;
+        padding-top: 30%;
+        padding-right: 0;
+    }
+    .rm-right {
+        padding: 0 10%;
+    }
+}
+
+#video {
+    background: url("/assets/images/J&R_Highlights-9.jpg") fixed center / cover no-repeat;
+    height: 100vh;
+}
+
+#see-you {
+    background: url("/assets/images/J&R_Highlights-2.jpg") fixed top / cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--offwhite);
+}
+
+.cu-txt {
+    font-family: TheSeasonsRegular, sans-serif;
+    font-size: min(10vw, 62px);
+    text-shadow: 0px 0px 12px rgba(39, 38, 36, 0.56);
+}
+
+.cu-you {
+    font-family: TheSeasonsItalic, sans-serif;
+}
+
+.cu-exclamation {
+    font-family: PinyonScript, sans-serif;
+}
