@@ -517,3 +517,20 @@ main {
 .cu-exclamation {
     font-family: PinyonScript, sans-serif;
 }
+
+.hidden {
+    opacity: 0;
+    transform: translateX(-40%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
