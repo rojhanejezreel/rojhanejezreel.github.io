@@ -407,6 +407,7 @@ main {
 
 @media only screen and (max-width: 600px) {
     #wear-puppy {
+        height: 100vh;
         flex-direction: column;
         justify-content:space-evenly
     }
@@ -485,16 +486,22 @@ main {
         background: var(--darkgray);
         color: var(--offwhite);
         height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center
+        display: grid;
+        place-items: center;
     }
     .rm-left {
-        padding-top: 0;
         padding-right: 0;
+        padding-top: 2%;
+    }
+    .rm-map-cont {
+        width: 80%;
+        height: 60%;
     }
     .rm-right {
         padding: 0 10%;
+    }
+    .rm-header {
+        margin-bottom: 10px;
     }
 }
 
