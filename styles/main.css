@@ -187,14 +187,14 @@ main {
 
 @media only screen and (max-width: 600px) {
     #our-story {
-        height: 90vh;
+        height: 100vh;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 2fr;
         background: var(--lightbrown);
     }
     .story-left {
-        padding: 10%;
+        padding: 6%;
     }
     .story-right {
         display: flex;
